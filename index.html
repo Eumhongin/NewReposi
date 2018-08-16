@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title></title>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('.panel').css({'width':$(window).outerWidth()*0.7+'px','height':$(window).outerHeight()*0.7+'px','margin-left':$(window).outerWidth()*0.15,'margin-top':$(window).outerHeight()*0.15,'border-radius':'25px'});
+      $('.emopanel').css({'height':$('.panel').outerHeight(),'width':$(window).outerWidth()*0.13+'px','left':$(window).outerWidth()+'px'});
+      $('.emosubpanel').css({'height':$('.emopanel').outerHeight()*0.95+'px','width':$('.emopanel').outerWidth()*0.95+'px','margin-top':$('.emopanel').outerHeight()*0.01+'px'});
+      $('.plus').on('click',function(){
+        $('.emopanel').css({'transition':'1s','left':$(window).outerWidth()*0.855+'px'});
+        for(var i = 0; i<16;i++)
+        {
+          $('<div>').css({'float':'left','background':'rgb('+Math.random()*100+','+Math.random()*100+','+Math.random()*100+')','width':$('.emosubpanel').outerWidth()*0.4+'px','height':$('.emosubpanel').outerWidth()*0.4+'px'}).appendTo('.emosubpanel');
+
+        }
+      });
+    });
+    </script>
+    <style media="screen">
+      body{
+        background: rgba(98,98,98,0.5);
+      }
+      .panel{
+        background-color: white;
+      }
+      .inputfield{
+        text-align: center;
+        margin:0 auto;
+      }
+      .inputfield > span{
+        cursor: pointer;
+      }
+      .emopanel{
+        background: #707070;
+        position: absolute;
+        border-radius: 20px;
+        text-align: center;
+
+      }
+      .emopanel > span{
+        color:white;
+      }
+      .emosubpanel{
+        margin:0 auto;
+        background-color: #D6D6D6;
+        border-radius: 20px;
+        overflow-y: scroll;
+      }
+      .emosubpanel:after{
+        content='';
+        clear:both;
+        display: block;
+      }
+      .emosubpanel > div{
+        margin-left:5%;
+        margin-top:5%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="panel">
+      <div class="emopanel">
+        <span>이모티콘</span>
+        <div class="emosubpanel">
+
+        </div>
+      </div>
+      <div class="inputfield">
+        <span class="plus">+</span>
+        <input type="text" name="" value="" placeholder="hello">
+      </div>
+
+    </div>
+
+  </body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title></title>
+
+  </head>
+  <body>
+
+  </body>
+</html> -->
